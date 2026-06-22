@@ -18,7 +18,7 @@ on:
 
 jobs:
   validate:
-    runs-on: windows-latest
+    runs-on: [self-hosted, windows, itax]
     env:
       ITAX_HOME: ${{ vars.ITAX_HOME || 'C:\itaxview\iTax Viewer' }}
     steps:
