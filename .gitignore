@@ -1,0 +1,10 @@
+target/
+*.class
+*.log
+*.tmp
+.classpath
+.project
+.settings/
+reference/
+Thumbs.db
+Desktop.ini

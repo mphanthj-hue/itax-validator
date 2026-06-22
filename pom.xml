@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>seatechit.ihtkk</groupId>
+    <artifactId>itax-validator</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>iTax Validator CLI</name>
+    <description>CLI tool để tự động validate hồ sơ thuế XML, chuẩn 100% như iTaxViewer</description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- iTaxViewer core JAR -->
+        <dependency>
+            <groupId>seatechit.ihtkk</groupId>
+            <artifactId>itaxviewer</artifactId>
+            <version>2.7.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/itaxviewer.jar</systemPath>
+        </dependency>
+
+        <!-- SWT (chỉ cần trên classpath, không dùng trực tiếp) -->
+        <dependency>
+            <groupId>org.eclipse.swt</groupId>
+            <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+            <version>4.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/org.eclipse.swt.win32.win32.x86_64-4.3.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.swt</groupId>
+            <artifactId>swt</artifactId>
+            <version>4.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/swt.jar</systemPath>
+        </dependency>
+
+        <!-- BouncyCastle cho chữ ký số -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk16</artifactId>
+            <version>1.46</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/bcprov-jdk16-146.jar</systemPath>
+        </dependency>
+
+        <!-- Commons IO -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-io-1.4.jar</systemPath>
+        </dependency>
+
+        <!-- Commons Lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-lang3-3.3.2.jar</systemPath>
+        </dependency>
+
+        <!-- PDFBox (cho PDF viewer, không dùng cho validator) -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox-app</artifactId>
+            <version>1.8.8</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/pdfbox-app-1.8.8.jar</systemPath>
+        </dependency>
+
+        <!-- Pd4ml -->
+        <dependency>
+            <groupId>pd4ml</groupId>
+            <artifactId>pd4ml</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/pd4ml.jar</systemPath>
+        </dependency>
+
+        <!-- Fonts -->
+        <dependency>
+            <groupId>fonts</groupId>
+            <artifactId>fonts</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/fonts.jar</systemPath>
+        </dependency>
+
+        <!-- SS CSS2 -->
+        <dependency>
+            <groupId>ss_css2</groupId>
+            <artifactId>ss_css2</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ss_css2.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>seatechit.ihtkk.tool.validator.TaxValidatorCLI</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>lib/itaxviewer-2.7.6.jar lib/org.eclipse.swt.win32.win32.x86_64-4.3.jar lib/swt-4.3.jar lib/bcprov-jdk16-1.46.jar lib/commons-io-1.4.jar lib/commons-lang3-3.3.2.jar lib/pdfbox-app-1.8.8.jar lib/pd4ml-1.0.jar lib/fonts-1.0.jar lib/ss_css2-1.0.jar</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

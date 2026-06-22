@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HSoThueDTu xmlns="http://kekhaithue.gdt.gov.vn/TKhaiThue">
+    <maTKhai>01</maTKhai>
+    <pbanTKhaiXML>2.0.0</pbanTKhaiXML>
+    <loaiTKhai>C</loaiTKhai>
+    <tenTKhai>Tờ khai thuế giá trị gia tăng</tenTKhai>
+    <kieuKy>M</kieuKy>
+    <TTChung>
+        <PBan>2.0.0</PBan>
+    </TTChung>
+</HSoThueDTu>
